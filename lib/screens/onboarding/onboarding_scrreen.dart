@@ -50,12 +50,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const SignInScreen(),
-                    ),
-                  );
+                  Navigator.pushNamed(context, '/signIn');
                 },
                 child: Text("Get Started".toUpperCase()),
               ),

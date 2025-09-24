@@ -1,4 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:foodly_ui/screens/auth/forgot_password_screen.dart';
+import 'package:foodly_ui/screens/auth/reset_email_sent_screen.dart';
+import 'package:foodly_ui/screens/auth/sign_in_screen.dart';
+import 'package:foodly_ui/screens/auth/sign_up_screen.dart';
+import 'package:foodly_ui/screens/details/details_screen.dart';
+import 'package:foodly_ui/screens/featured/featurred_screen.dart';
+import 'package:foodly_ui/screens/filter/filter_screen.dart';
+import 'package:foodly_ui/screens/findRestaurants/find_restaurants_screen.dart';
+import 'package:foodly_ui/screens/home/home_screen.dart';
+import 'package:foodly_ui/screens/orderDetails/order_details_screen.dart';
+import 'package:foodly_ui/screens/phoneLogin/number_verify_screen.dart';
+import 'package:foodly_ui/screens/phoneLogin/phone_login_screen.dart';
+import 'package:foodly_ui/screens/profile/profile_screen.dart';
+import 'package:foodly_ui/screens/search/search_screen.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'constants.dart';
 import 'screens/onboarding/onboarding_scrreen.dart';
@@ -41,7 +55,24 @@ class MyApp extends StatelessWidget {
           hintStyle: TextStyle(color: bodyTextColor),
         ),
       ),
-      home: const OnboardingScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const OnboardingScreen(),
+        '/signIn': (context) => const SignInScreen(),
+        '/signUp': (context) => const SignUpScreen(),
+        '/forgotPassword': (context) => const ForgotPasswordScreen(),
+        '/resetEmailSent': (context) => const ResetEmailSentScreen(),
+        '/home': (context) => const HomeScreen(),
+        '/details': (context) => const DetailsScreen(),
+        '/featured': (context) => const FeaturedScreen(),
+        '/filter': (context) => const FilterScreen(),
+        '/findRestaurants': (context) => const FindRestaurantsScreen(),
+        '/orderDetails': (context) => const OrderDetailsScreen(),
+        '/phoneLogin': (context) => const PghoneLoginScreen(),
+        '/numberVerify': (context) => const NumberVerifyScreen(),
+        '/profile': (context) => const ProfileScreen(),
+        '/search': (context) => const SearchScreen(),
+      },
     );
   }
 }
